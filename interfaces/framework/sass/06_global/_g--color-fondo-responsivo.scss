@@ -1,0 +1,36 @@
+// @each $prefix, $min-width in $breakpoints {
+//     for ($i : 1 through length($min-width)) {
+//         @media (min-width: #{$i}) and (max-width: #{$i - 1}) {
+//             @each $color in $colors {
+//                 .g--color-fondo-#{$color} {
+//                     background-color: $color;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+// @each $prefix, $min-width in $breakpoints-color {
+//     $index: index($breakpoints-color, $min-width);
+
+//     @if (nth($breakpoints-color, $index) + 1) !=0 {
+//         @media (min-width: #{$min-width}) and (max-width: #{$index + 1}px) {
+//             @each $color, $code in $colors {
+//                 .g--color-fondo-#{$prefix}-#{$color} {
+//                     background-color: $code;
+//                 }
+//             }
+//         }
+//     }
+
+//     @else {
+//         @media (min-width: #{$min-width}) {
+//             @each $color, $code in $colors {
+//                 .g--color-fondo-#{$prefix}-#{$color} {
+//                     background-color: $code;
+//                 }
+//             }
+//         }
+//     }
+// }

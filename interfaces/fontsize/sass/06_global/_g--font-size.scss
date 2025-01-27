@@ -1,0 +1,9 @@
+@each $name, $size in $breakpoints {
+    @media(min-width: #{$size}) {
+        @each $value in $font-size {
+            .g--font-size-#{$name} {
+                font-size: $value;
+            }
+        }
+    }
+}

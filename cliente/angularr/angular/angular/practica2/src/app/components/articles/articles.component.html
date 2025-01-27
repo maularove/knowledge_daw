@@ -1,0 +1,63 @@
+<select (change)="showArticles($event)">
+    @for(category of categories; track category){
+    <option value="{{category}}">{{category}}</option>
+    }
+</select>
+
+<!-- <main>
+    @for(article of articles; track article.id){
+    <div class="card" style="width: 18rem;">
+        <img src="img/{{article.id}}.jpg" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{article.nombre}} ({{article.unidades}})</h5>
+            <p class="card-text">{{article.descripcion}}</p>
+            <b>
+                <p class="card-text text-center">{{article.precio}}</p>
+            </b>
+        </div>
+        <!-- <button class="btn {{article.unidades <= 0 ? 'btn-danger' : 'btn-primary'}}" (click)="comprar(article)"
+            [disabled]="article.unidades <= 0">Comprar</button> 
+        <button class="btn" [ngClass]="{'btn-primary': article.unidades > 0, 'btn-danger': article.unidades <= 0}"
+            (click)="comprar(article)" [disabled]="article.unidades <= 0">Comprar</button>
+    </div>
+    }
+</main> -->
+
+<table class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Unidades</th>
+        <th>Comprar</th>
+    </tr>
+    @for(article of articles; track article.id){
+    <tr>
+        <td>{{article.id}}</td>
+        <td>{{article.nombre}}</td>
+        <td>{{article.descripcion}}</td>
+        <td>{{article.precio}}</td>
+        <td>{{article.unidades}}</td>
+        <td>
+            <button class="btn" [ngClass]="{'btn-primary': article.unidades > 0, 'btn-danger': article.unidades <= 0}"
+                (click)="showArticle(article.id)" [disabled]="article.unidades <= 0">Ver detalles</button>
+        </td>
+    </tr>
+    }
+</table>
+
+@if(isShowed){
+<div class="card" style="width: 18rem;">
+    <img src="img/{{article.id}}.jpg" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{article.nombre}} ({{article.unidades}})</h5>
+        <p class="card-text">{{article.descripcion}}</p>
+        <b>
+            <p class="card-text text-center">{{article.precio}}</p>
+        </b>
+    </div>
+    <button class="btn" [ngClass]="{'btn-primary': article.unidades > 0, 'btn-danger': article.unidades <= 0}"
+        (click)="comprar(article)" [disabled]="article.unidades <= 0">Comprar</button>
+</div>
+}

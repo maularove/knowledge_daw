@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+
+            /* distersiona el elemento, 20 gradps eje X, 10 grados eje Y  */
+            transform: skew(20deg, 10deg);
+            margin: 50px;
+        }
+
+        .c-button {
+            padding: 10px 20px 10px 20px;
+            background-color: #ffffff;
+            border: 1px solid #bbd4f7;
+            border-radius: 4px;
+            cursor: pointer;
+            /* transition: background-color 0.5s linear 0.3s, box-shadow 1s; */
+            transition: background-color 0.3s ease-in, transform 1s ease-in;
+        }
+
+        .c-button:hover {
+            background-color: #bbd4f7;
+            transform: scale(1.2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Ejemplo de transform: skew</h1>
+    <div></div> -->
+    <button class="c-button"></button>
+    <!-- <button class="c-button"></button>
+    <button class="c-button"></button> -->
+</body>
+
+</html>

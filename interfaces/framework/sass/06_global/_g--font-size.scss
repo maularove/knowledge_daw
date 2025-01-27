@@ -1,0 +1,9 @@
+@each $prefix, $min-width in $breakpoints {
+    @media (min-width: #{$min-width}) {
+        @each $fontt in $font-size {
+            .g--font-size-#{$fontt} {
+                font-size: $fontt;
+            }
+        }
+    }
+}

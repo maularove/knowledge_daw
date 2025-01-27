@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition con Velocidad Variable</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 50px;
+            transition: transform 2s ease-in-out, background-color 2s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        .box:hover {
+            /* transform: translateX(300px) scale(1.5); */
+            /* Se mueve y agranda */
+            /* background-color: lightcoral; */
+            /* Cambia de color */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transición con Cambio de Velocidad</h1>
+    <p>Pasa el mouse sobre el cuadrado para ver el efecto.</p>
+    <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .c-cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: #bbd4f7;
+            border-radius: 4px;
+        }
+
+        .c-cuadrado--girar {
+            animation-name: animacion-girar;
+            animation-duration: 3s;
+        }
+
+        @keyframes animacion-girar {
+            0% {
+                transform: rotate(0deg);
+                background-color: #bbd4f7;
+            }
+
+            20% {
+                transform: rotate(360deg);
+                background-color: #1C4673;
+            }
+
+            40% {
+                transform: rotate(0deg);
+                background-color: #bbd4f7;
+            }
+
+            80% {
+                transform: rotate();
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div style="padding:200px">
+        <div id="cuadrado1" class="c-cuadrado c-cuadrado--girar">eleoele</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+@use "sass:math";
+
+.c-table {
+    overflow: auto;
+    $c-increase: 50;
+    $c-max-width: 1350;
+
+    &__head {
+        @for $i from 1 through math.div($c-max-width, $c-increase) {
+            $value: $i * $c-increase;
+
+            &--min-width-#{$i} {
+                border: 1px solid red;
+                min-width: #{$value}px;
+            }
+
+            &--max-width-#{$i} {
+                border: 1px solid red;
+                max-width: #{$value}px;
+            }
+
+            &--width-#{$i} {
+                border: 1px solid red;
+                width: #{$value}px;
+                min-width: #{$value}px;
+            }
+        }
+    }
+
+}
